@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Non–Array-Generating Iterator Functions
+        function square(num) {
+            console.log(num, num * num)
+        }
+
+        var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        nums.forEach(square)
+        console.log(nums)
+        /*
+        Output:
+            1 1
+            2 4
+            3 9
+            4 16
+            5 25
+            6 36
+            7 49
+            8 64
+            9 81
+            10 100
+        */
+
+        // every() áp dụng cho hàm Boolean của mảng, trả về true nếu hàm trả về true cho toàn bộ phần tử trong mảng thỏa điều khiện của hàm
+        function isEven(num) {
+            return num % 2 == 0
+        }
+
+        var nums = [2, 4, 6, 8, 10];
+        var even = nums.every(isEven);
+        if (even) {
+            console.log("all number are even")
+        }
+        else {
+            console.log("not all number are even")
+        }
+        // Output: all number are even vì nó thỏa điều kiện tất các phần tử trong mảng đều là chẵn, 
+        // Nếu mảng thay đổi thành var nums = [2,4,6,7,8,10] có số 7 là lẻ, khi đó nó sẽ trả về là not all number are even 
+
+        // some() áp dụng cho hàm Boolean của mảng, trả về true nếu có ít nhất một phần tử thỏa điều kiện của hàm
+        function
+            isEven(num) {
+            return num % 2 == 0;
+        }
+        var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var someEven = nums.some(isEven);
+        if (someEven) {
+            console.log("some numbers are even");
+        }
+        else {
+            console.log("no numbers are even");
+        }
+        // some numbers are even
+        nums = [1, 3, 5, 7, 9];
+        someEven = nums.some(isEven);
+        if (someEven) {
+            console.log("some numbers are even");
+        }
+        else {
+            console.log("no numbers are even");
+        }
+        // no numbers are even
+        // TỚI TRANG 25
+
+
+    </script>
+</body>
+
+</html>

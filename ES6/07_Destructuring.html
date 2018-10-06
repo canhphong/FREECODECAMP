@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Tham khảo: https://viblo.asia/p/destructuring-assignment-in-es6-xlbRBNQgRDM
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+        // http://exploringjs.com/es6/ch_destructuring.html
+        // https://medium.freecodecamp.org/learn-es6-the-dope-way-part-iv-default-parameters-destructuring-assignment-a-new-es6-method-44393190b8c9#.nfallixi6
+
+/* 
+Destructuring Assignment
+
+Benefits:
+
+    Extracts data from Arrays and Objects and assigns them to Variables
+    Simplifies the amount of keystrokes needed, and improves readability
+    Super useful when needing to pass in large amount of data with the same properties (such as user profiles)    
+*/
+        // Normal assignment
+        // let numbers = [1, 2, 3];
+        // let person = { name: 'Captain America', age: 97 };
+
+        // Destructuring assignment
+        // let [a, b, c] = numbers;
+        // let { name, age } = person;
+
+        // STRINGS
+        // let message = 'Hello';
+        // let [a, b] = message;
+        // let [x, y, ...z] = message;
+
+        // console.log(a, b);    // H e
+        // console.log(x, y, z); // H e ['l', 'l', 'o']
+
+        // ARRAYS
+        let numbers = [101, 102, 103]
+        let [x, y, z] = numbers
+        console.log(x, y, z)
+
+    </script>
+</body>
+
+</html>

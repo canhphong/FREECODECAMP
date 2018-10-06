@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const handler = {
+            get: function (obj, prop) {
+                console.log('A value has been accessed');
+                return obj[prop]; // Return the value stored in the key being accessed
+            },
+
+            set: function (obj, prop, value) {
+                console.log(`${prop} is being set to ${value}`)
+            }
+        }
+
+        const initialObj = {
+            id: 1,
+            name: 'Foo Bar'
+        }
+
+        const proxiedObj = new Proxy(initialObj, handler);
+
+       // console.log(proxiedObj.name);
+       proxiedObj.age = 24
+       //age is being set to 24
+    </script>
+</body>
+
+</html>

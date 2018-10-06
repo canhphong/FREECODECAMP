@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const
+        // giá trị không bao giờ thay đổi
+        // const PI = 3.14
+        // PI = 1
+        // console.log(PI)
+        // Lỗi Uncaught TypeError: Assignment to constant variable
+
+
+        // let tạo ra một biến chỉ có thể truy cập được trong block bao quanh nó
+        // var tạo ra một biến có phạm vi truy cập xuyên suốt function chứa nó.
+
+        // var 
+        function foo1() {
+            var x = 10;
+            if (true) {
+                var x = 20; // x ở đây cũng là x ở trên
+                console.log(x); // in ra 20
+            }
+            console.log(x); // vẫn là 20
+        }
+        foo1()
+
+        // let 
+        function foo2() {
+            let x = 10;
+            if (true) {
+                let x = 20; // x này là x khác rồi đấy, let x chỉ có tác dụng trong khối if, còn ở ngoài khối nó có giá trị khác
+                console.log(x); // in ra 20
+            }
+            console.log(x); // in ra 10
+        }
+        foo2()
+
+        var x = 'global';
+        let y = 'global';
+        console.log(this.x); // "global" 
+        console.log(this.y); // undefined 
+
+        // Callback trong một vòng lặp ta dùng LET
+        for (var i = 0; i < 5; i++) {
+            setTimeout(function () {
+                console.log('Yo! ', i);
+            }, 1000);
+        }
+        // Yo! 5
+        // Yo! 5
+        // Yo! 5
+        // Yo! 5
+        // Yo! 5
+        //Giá trị của biến i bên trong hàm callback luôn là giá trị cuối cùng của i trong vòng lặp.
+        
+        // => ĐỂ KHẮC PHỤC TA DÙNG LET  
+        for (let i = 0; i < 5; i++) {
+            setTimeout(function () {
+                console.log('Yo! ', i);
+            }, 1000);
+        }
+        // Output --
+        // Yo!  0
+        // Yo!  1
+        // Yo!  2
+        // Yo!  3
+        // Yo!  4
+    </script>
+</body>
+
+</html>

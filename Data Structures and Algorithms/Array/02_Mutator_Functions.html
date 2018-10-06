@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Mutator functions cho phép chỉnh sửa nội dung trong mảng mà cần tham chiếu đến phần tử riêng rẻ
+    // 1. Adding Elements to an Array
+    // arr.unshift() để thêm phần tử vào đầu mảng
+    // arr.push() để thêm phần tử vào cuối mảng
+    var nums1 = [1,2,3,4,5] 
+    var nums2 = [1,2,3,4,5] 
+    console.log(nums1) // Array(5) [ 1, 2, 3, 4, 5 ]
+    // thêm phần tử vào Đầu mảng
+    nums1.unshift(6,7,8) 
+    console.log(nums1) // Array(8) [ 6, 7, 8, 1, 2, 3, 4, 5 ]
+    // thêm phần tử vào Cuối mảng
+    nums2.push(6,7,8) 
+    console.log(nums2) // Array(8) [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+
+    // 2. Remove Elements to an Array
+    // arr.shift() để xóa phần tử vào đầu mảng
+    // arr.pop() để xóa phần tử vào cuối mảng
+
+    // 3. Adding and Removing Elements from the Middle of an Array
+    var nums = [1,2,3,7,8,9];
+    var newElements = [4,5,6];
+    nums.splice(3,0,newElements);
+    console.log(nums)
+    // Array(7) [ 1, 2, 3, 4,5,6, 7, 8, 9 ]
+
+    // Thêm trực tiếp 4,5,6 vào mảng mà ko cần tạo mảng mới
+    var nums1 = [1,2,3,7,8,9];
+    nums1.splice(3,0,4,5,6);
+    console.log(nums1)
+    // Array(9) [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+
+    // Dùng splice() để loại bỏ phần tử của mảng, ở đây mình lấy ra các phần tử 100,200,300,400, do ko thực hiện phép gán phần tử đã lấy nên sẽ ko hiện ra các số 100,200,300,400
+    var nums = [1,2,3,100,200,300,400,4,5];
+    nums.splice(3,4)
+    console.log(nums)
+
+    // 4. Putting Array Elements in Order
+    // reverse() dùng đảo ngược các phần tử trong mảng
+    var nums1 = [1,2,3,4,5];
+    nums1.reverse();
+    console.log(nums1) // Array(5) [ 5, 4, 3, 2, 1 ]
+
+    // sort() dùng sắp xếp lại chuỗi hoặc số các phần tử trong mảng
+    var names = ["David" ,"Mike","Cynthia","Clayton","Bryan","Raymond"];
+    names.sort();
+    console.log(names) // Array(6) [ "Bryan", "Clayton", "Cynthia", "David", "Mike", "Raymond" ] (từ A-Z)
+
+    // NHƯNG sort() nó Không sắp xếp tốt với số
+    var nums = [3,1,2,100,4,200];
+    nums.sort();
+    console.log(nums) // Array(6) [ 1, 100, 2, 200, 3, 4 ] (thấy fail chưa :)
+
+    // Cách  khắc phục sắp xếp theo số
+    function compare(num1, num2) {
+        return num1 - num2; 
+    }
+
+    var nums = [3,1,2,100,4,200];
+    nums.sort(compare);
+    console.log(nums)
+
+
+    </script>
+</body>
+</html>

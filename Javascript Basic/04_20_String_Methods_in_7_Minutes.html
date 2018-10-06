@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 20 String Method
+
+        var stringOne = "freeCodeCamp is the best place to learn"
+        var stringTwo = "frontend and backend development"
+
+        // charAt()
+            console.log(stringOne.charAt(1)) // r
+            console.log(stringOne.charAt(0)) // f
+            console.log(stringOne.charAt(4)) // C
+
+        // charCodeAt()
+        console.log(stringOne.charCodeAt(1)) // code của ký tự r là 114 
+        
+        // concat()
+        console.log(stringOne.concat(stringTwo)) // nối chuỗi 1 với chuỗi 2
+        // Output: freeCodeCamp is the best place to learnfrontend and backend development
+
+        // endsWith()
+        console.log(stringOne.endsWith("learn")) // true
+        console.log(stringOne.endsWith("to")) // false
+        // kết thúc với ký tự nào, kết quả true hoặc false
+
+        // fromCharCode()
+        console.log(String.fromCharCode(102)) // f
+        console.log(String.fromCharCode(114)) // r
+        
+        // includes()
+        console.log(stringTwo.includes("end")) // true
+        console.log(stringTwo.includes("endd")) // false
+        // trong chuỗi đó có bao gồm ký tự đó hay không
+
+        // indexOf()
+        console.log(stringTwo.indexOf("end")) // 5 
+        console.log(stringTwo.indexOf("nt")) // 3
+        // indexOf của chuỗi, trả vè số của chuỗi đó, đếm từ 0, có 2 end => chỉ lấy cái giống nhau đầu tiên
+        
+        // lastIndexOf()
+        console.log(stringTwo.lastIndexOf("end")) // 17
+        // 2 thằng end giống nhau thì lấy thằng end thứ 2 đến từ đầu vào => lấy dc 17 
+
+        // match() 
+        console.log(stringTwo.match(/end/g)) // Array [ "end", "end" ]
+
+        // repeat()
+        console.log(stringOne.repeat(5)) // muốn lặp lại chuỗi đó bao nhiêu lần
+        
+        // replace()
+        console.log(stringTwo.replace(/end/g, "END"))
+
+        // search()
+        console.log(stringTwo.search("end")) // giống indexOf()
+        // slice()
+        console.log(stringTwo.slice(2,4)) // on
+
+        // split()
+        console.log(stringOne.split(" "))
+        // Output: Array(7) [ "freeCodeCamp", "is", "the", "best", "place", "to", "learn" ]
+        // chia các ký tự thành 1 mảng
+
+        // startsWith()
+        console.log(stringOne.startsWith("free")) // true
+        console.log(stringOne.startsWith("freeq")) // false
+
+        // substr()
+        console.log(stringTwo.substr(2,4)) // onte
+        // Bắt đầu từ vị trí thứ 2, lấy 4 ký tự
+
+        // substring()
+        console.log(stringTwo.substring(2,4)) // on
+      
+        // toLowerCace()
+        console.log(stringOne.toLocaleLowerCase())
+        // chuyển tất cả chuỗi thành in thường
+
+        // toUpperCase()
+        console.log(stringOne.toUpperCase())
+        // chuyển tất cả chuỗi thành in HOA
+
+        // trim()
+        var stringThree = "    Subcripe Now    " // Subcripe Now
+        console.log(stringThree.trim())
+        // Loại bỏ các khoảng trắng trước và sau của chuỗi
+    </script>
+</body>
+</html>

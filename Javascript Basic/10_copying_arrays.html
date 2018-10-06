@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var original = [true, true, undefined, false, null];
+
+        // slice (cắt chuỗi)
+        var copy1 = original.slice(0)
+        
+        // spread operator
+        var copy2 = [...original]
+        console.log(copy1,copy2)
+
+        // Deep copying
+        var deepArray = [["freeCodeCamp"]]
+        var shallowCopy = deepArray.slice(0)
+
+        // shallowCopy[0].push("is great")
+        // console.log(deepArray[0],shallowCopy[0])
+
+        var deepCopy = JSON.parse((JSON.stringify(deepArray)))
+        deepCopy[0].push("is great")
+        console.log(deepArray[0],deepCopy[0])
+    </script>
+</body>
+</html>

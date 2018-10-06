@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // forEach
+        // Mỗi phẩn tử sẽ tương ứng với chỉ số index trong mảng
+        [1, 2, 3].forEach(function (item, index) {
+            console.log(item, index)
+        })
+        // Output
+        // 1 0
+        // 2 1
+        // 3 2
+        // ==============================================
+        // map
+        const three = [1, 2, 3]
+        const doubled = three.map(function (item) {
+            return item * 2
+        })
+        console.log(doubled)
+        // Array(3) [ 2, 4, 6 ]
+
+        // ==============================================
+        // filter
+        const ints = [1, 2, 3, 4]
+        const evens = ints.filter(function (item) {
+            return item % 2 === 0
+        })
+        console.log(evens)
+        // Array [ 2, 4 ]
+
+        // ==============================================
+        // reduce
+        const sum = [1, 2, 3].reduce(function (result, item) {
+            return result + item
+        })
+        console.log(sum)
+        // 6
+
+        // ==============================================
+        //some
+        const hasNegativeNumbers = [1, 2, 3, -1, 4].some(function (item) {
+            return item < 0
+        })
+        console.log(hasNegativeNumbers)
+        // true vì trong mảng có -1 nhỏ hơn 0, nếu return item = 0 thì nó trả về là false
+
+        // ==============================================
+        // every
+        const allPositiveNumbers = [1, 2, -3].every(function (item) {
+            return item < 0
+        })
+        console.log(allPositiveNumbers)
+        // false
+
+        // ==============================================
+        // find
+        const objects = [{ id: 'a', id: 'b', id: "c" }]
+        const found = objects.find(function (item) {
+            return item.id === 'c'
+        })
+        console.log(found)
+        // Object { id: "c" }
+        // undefined nếu không tìm thấy
+
+        // ==============================================
+        // findIndex()
+        const objects2 = [{ id: 'a', id: 'b', id: "c" }]
+        const foundIndex = objects2.findIndex(function (item) {
+            return item.id === 'c'
+        })
+        console.log(foundIndex)
+        // 0 
+123 
+     </script>
+</body>
+
+</html>

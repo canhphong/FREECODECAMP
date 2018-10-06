@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function square(number) {
+        //     return number*number
+        // }
+        // console.log(square(5))
+//=========================
+        // var someVar = "Red"
+        // function myColor() {
+        //     var someVar = "Blue"
+        //     console.log(someVar)
+        // }
+        // myColor();
+        // console.log(someVar)
+//=========================
+
+function addSquares (a,b){
+    function square(x) {
+        return x*x
+    }
+    return square(a) + square(b)
+}
+
+a = addSquares(2,3) // 2*2 + 3*3 = 13
+b = addSquares(3,4) // 25
+c = addSquares(4,5) // 41
+console.log(a)
+console.log(b)
+console.log(c)
+        
+    </script>
+</body>
+</html>

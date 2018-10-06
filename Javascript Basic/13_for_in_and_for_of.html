@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = { fname: "Beau", name: "Carnes ", arms: 2 }
+        let arr = [3, 5, 7]
+        arr.foo = "Hello"
+        let text = ""
+        for (let x in person) {
+            text += person[x]
+            console.log(x)
+        }
+        console.log(text)
+        // fname
+        // name
+        // arms
+        // BeauCarnes2
+        for (let i in arr) {
+            console.log(i)
+        }
+        // Lặp sẽ ra: số thứ tự phần tử như 0 1 2 3
+        //Output: 
+        // 0
+        // 1
+        // 2
+        //foo
+
+        for (let i of arr) {
+            console.log(i)
+        }
+        // Lặp sẽ ra: Tên phần tử trong mảng
+        //Output: 
+        // 3 
+        // 5 
+        // 7
+    </script>
+</body>
+
+</html>

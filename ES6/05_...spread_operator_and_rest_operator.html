@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // add the elements of an existing array in to a new array
+    var certAdd = ["A","B"]
+    var certifications = ["C",...certAdd, "D","E"]
+    console.log(certifications)
+
+    // pass elements of a array as arguments to a function
+    function addThreeNumbers(x,y,z) {
+        console.log(x+y+z)
+    }
+
+    var args = [1,2,3]
+    addThreeNumbers(...args) // 6
+
+    // copy arrays
+    var arr = [1,2,3]
+    var arr2 = [...arr]
+    arr2.push(4)
+    console.log(arr) // Array(3) [ 1, 2, 3 ]
+    console.log(arr2) // Array(4) [ 1, 2, 3, 4 ]
+
+    // concatenate arrays
+    var arr1 = [0,1,2]
+    var arr2 = [3,4,5]
+    // arr1.concat(arr2) // thay vì dùng arr.concat() để nối chuỗi thì dùng ...operator như phía dưới
+    arr1 = [...arr1,'freecodecamp',...arr2]
+    console.log(arr1)
+    // Array(7) [ 0, 1, 2, "freecodecamp", 3, 4, 5 ]
+
+    // REST: condense multiple elements into an array
+    function multiply(multiplier, ...theArgs) {
+        return theArgs.map(function(element){
+            return multiplier*element
+        })
+    }
+    var arr = multiply(2,1,2,3)
+    console.log(arr)
+    // 2*1 = 2
+    // 2*2 = 4
+    // 2*3 = 6
+    // Array(3) [ 2, 4, 6 ]
+        </script>
+</body>
+</html>

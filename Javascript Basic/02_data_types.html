@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // There are 7 data types
+        // Boolean
+        var data = true
+        if (data) {
+            console.log("Boolean Rules")
+        }
+        else {
+            console.log("Boolean are lame")
+        }
+
+        // Null
+        var n = null
+        console.log(n * 10)
+        // Undefined
+        var a
+        console.log(a + 12)
+        // Number
+        var num = 3.682
+        var ber = 6.424
+        console.log(num+ber)
+        // String. "Howdy"
+        var name = "String Something"
+        console.log("This is string " + name)
+        // Symbol
+        var sym1 = Symbol("foo")
+        var sym2 = Symbol("foo")
+        console.log(sym1===sym2)
+        console.log(String(sym1)===String(sym2))
+        console.log(String(sym1))
+        console.log(String(sym2))
+
+        // Object
+        var myCar = new Object();
+        myCar.make = "Ford"
+        myCar.model = "Mustan" 
+        console.log(myCar)
+        var json_string = JSON.stringify(myCar)
+        console.log(json_string)
+        var doituong = JSON.parse(json_string)
+        console.log(doituong)
+    </script>
+</body>
+
+</html>

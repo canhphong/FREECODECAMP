@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sandwich = ["peanut butter", "jelly", "bread"]; // phần tử trong mảng: 0,1,2
+        var teams = [["Bulls", 23], ["White Sox", 45]];
+        console.log(sandwich[0]) //peanut butter
+        console.log(sandwich[2]) //bread
+        console.log(sandwich[3]) //undefined
+
+        console.log(teams[0][0]) // Bulls
+        console.log(teams[0][1]) // 23
+        console.log(teams[1][0]) // White Sox
+        console.log(teams[1][1]) // 45
+
+        teams[1][0] = "Red socks"
+        console.log(teams)
+        // Output: 
+        // 0: Array [ "Bulls", 23 ]
+        // 1: Array [ "Red socks", 45 ]
+
+        sandwich.forEach(function(element){
+            console.log(element)
+        })
+        // Output là từng phần tử torng mảng
+        // peanut butter
+        // jelly
+        // bread
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+Chú ý: tenphantu có thể là chuỗi như "abc" hoặc số như 1
+*/
+
+        var arr = ["a", "b", "c"];
+        // Thêm các phần tử vào cuối mảng dùng arr.push(tenphantu)
+       arr.push("d");
+       console.log(arr)
+        
+        // Lấy ra phần tử cuối dùng của mảng dùng arr.pop()
+       console.log(arr.pop())
+       console.log(arr) // ban đầu là 4, lấy ra một phần tử cuối mảng => còn lại 3
+
+       var arr2 = ["g","q"];
+       // Nối 2 mảng dùng arr.concat(arr2)
+       console.log(arr.concat(arr2))
+       // Output: Array(5) [ "a", "b", "c", "g", "q" ]
+      
+      // Hợp các phần tử trong mảng lại thành một arr.join(kytunaodo)
+      console.log(arr.join(" ")); // a b c
+
+        // Đảo ngược mảng dùng arr.reverse()
+      console.log(arr.reverse()) // Array(3) [ "c", "b", "a" ]
+        console.log(arr) // // Array(3) [ "c", "b", "a" ]
+
+        // Loại bỏ phần tử đầu tiên trong mảng arr.shift()
+        console.log(arr.shift()) // c
+        console.log(arr) // Array [ "b", "a" ]
+
+        // Thêm phần tử đầu tiên trong mảng arr.unshift(tenphantu)
+        console.log(arr.unshift("p")) // 3
+        console.log(arr) // Array(3) [ "p", "b", "a" ]
+        
+        // Giải thích: lấy phần tử thứ 2 trong 3 phần tử => [ "b", "a" ]
+        console.log(arr.slice(1,3)) // Array [ "b", "a" ]
+        // Giải thích: lấy phần tử thứ 0 trong 2 phần tử => [ "p", "b" ]
+        console.log(arr.slice(0,2)) // Array [ "p", "b" ]
+        
+        arr.push("i");
+        arr.push("f");
+        arr.sort();
+        console.log(arr); // Array(5) [ "a", "b", "f", "i", "p" ]
+
+        // Giải thích: từ f lấy 3 phần tử được "f", "i", "p", thay 3 phần tử đó bằng JS Nugets
+        console.log(arr.splice(2,3,"JS Nugets")) // Array(3) [ "f", "i", "p" ]
+        console.log(arr) // Array(3) [ "a", "b", "JS Nugets" ]
+
+    </script>
+</body>
+</html>
